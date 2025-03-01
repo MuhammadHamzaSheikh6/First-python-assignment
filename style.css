@@ -1,34 +1,48 @@
-/* style.css */
+/* Dark mode background */
+@media (prefers-color-scheme: dark) {
+  .stApp {
+      background-color: #0E1117;  /* Or whatever dark background you prefer */
+  }
+}
 
-/* Change the background color of the app */
-.stApp {
-    background-color: #f8f9fa; /* Very light gray */
-  }
-  
-  /* Style the Streamlit buttons */
+/* Style the Streamlit buttons */
+.stButton > button {
+  color: white;
+  background-color: #007bff; /* A nice blue */
+  border: none;
+  padding: 0.5em 1em; /* Adjust padding for size */
+  font-size: 1em;
+  border-radius: 0.25em; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; /* Smooth transition */
+}
+
+.stButton > button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style the Subheaders */
+.stApp h2 {  /* Targets h2 elements within the Streamlit app */
+  color: #343a40; /* A dark gray for subheadings */
+  font-weight: bold; /* Make them bold */
+  margin-bottom: 0.5em; /* Add some spacing below the subheader */
+}
+
+/* Add spacing between elements */
+.element-container {
+margin-bottom: 1em;
+}
+
+/* Dark mode adjustments (example) */
+@media (prefers-color-scheme: dark) {
   .stButton > button {
-    color: white;
-    background-color: #007bff; /* A nice blue */
-    border: none;
-    padding: 0.5em 1em; /* Adjust padding for size */
-    font-size: 1em;
-    border-radius: 0.25em; /* Rounded corners */
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out; /* Smooth transition */
+    color: #212529;  /* Dark text for buttons in dark mode */
+    background-color: #6c757d;  /* Dark gray buttons in dark mode */
   }
-  
-  .stButton > button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-  }
-  
-  /* Style the Subheaders */
+
   .stApp h2 {  /* Targets h2 elements within the Streamlit app */
-    color: #343a40; /* A dark gray for subheadings */
-    font-weight: bold; /* Make them bold */
-    margin-bottom: 0.5em; /* Add some spacing below the subheader */
-  }
-  
-  /* Add spacing between elements */
-  .element-container {
-    margin-bottom: 1em;
-  }
+      color: #ffffff; /* A dark gray for subheadings */
+      font-weight: bold; /* Make them bold */
+      margin-bottom: 0.5em; /* Add some spacing below the subheader */
+    }
+}
